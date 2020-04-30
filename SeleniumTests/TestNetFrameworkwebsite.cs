@@ -9,9 +9,11 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace SeleniumTest
+namespace SeleniumTests
 {
-    class TestNetFrameworkwebsite
+    [TestFixture]
+    [Ignore("Ignore a fixture")]
+    public class TestNetFrameworkwebsite
     {
         IWebDriver driver = new ChromeDriver();
 

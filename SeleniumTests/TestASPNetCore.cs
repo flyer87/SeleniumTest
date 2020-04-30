@@ -8,18 +8,23 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace SeleniumTest
+namespace SeleniumTests
 {
-    class TestASPNetCore
+    
+    [TestFixture]
+    [Ignore("Ignore a fixture")]
+    public class TestASPNetCore
     {
         IWebDriver driver = new ChromeDriver();
+
         [SetUp]
+        
         public void Intialize()
         {            
             driver.Navigate().GoToUrl("https://localhost:44316");                        
         }
 
-        [Test]
+        [Test]        
         public void ExecuteTest()
         {
             Thread.Sleep(2000);
